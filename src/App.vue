@@ -1,13 +1,15 @@
+<script>
+
+import AppFooter from './components/layout/appFooter.vue';
+
+</script>
 <template>
     <div class="app">
         <div class="header">
             <h1>Controle de Gastos Rapido</h1>
-            <div>
-                <button class="small-btn" @click="filter = 'all'">Tudo</button>
-                <button class="small-btn" @click="filter = 'food'">Comida</button>
-                <button class="small-btn" @click="filter = 'transport'">Transporte</button>
-                <button class="small-btn" @click="filter = 'other'">Outros</button>
-            </div>
+
+            
+           
         </div>
 
         <div class="layout">
@@ -51,6 +53,7 @@
             </div>
         </div>
     </div>
+    <AppFooter />
 </template>
 
 <script setup>
