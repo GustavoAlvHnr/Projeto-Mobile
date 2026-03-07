@@ -1,15 +1,9 @@
-<script>
 
-import AppFooter from './components/layout/appFooter.vue';
-
-</script>
 <template>
     <div class="app">
         <div class="header">
             <h1>Controle de Gastos Rapido</h1>
 
-            
-           
         </div>
 
         <div class="layout">
@@ -53,11 +47,13 @@ import AppFooter from './components/layout/appFooter.vue';
             </div>
         </div>
     </div>
-    <AppFooter />
+    <AppFooter :filtro-atual="filter" @update-filter="filter = $event" />
 </template>
 
 <script setup>
+import AppFooter from './components/layout/appFooter.vue';
 import { computed, ref } from 'vue';
+
 
 const expenses = ref([
     { id: 1, title: 'Cafe', value: 6, category: 'food' },
