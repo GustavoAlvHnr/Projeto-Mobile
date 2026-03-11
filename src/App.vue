@@ -1,13 +1,9 @@
+
 <template>
     <div class="app">
         <div class="header">
             <h1>Controle de Gastos Rapido</h1>
-            <div>
-                <button class="small-btn" @click="filter = 'all'">Tudo</button>
-                <button class="small-btn" @click="filter = 'food'">Comida</button>
-                <button class="small-btn" @click="filter = 'transport'">Transporte</button>
-                <button class="small-btn" @click="filter = 'other'">Outros</button>
-            </div>
+
         </div>
 
         <div class="layout">
@@ -51,10 +47,13 @@
             </div>
         </div>
     </div>
+    <AppFooter :filtro-atual="filter" @update-filter="filter = $event" />
 </template>
 
 <script setup>
+import AppFooter from './components/layout/appFooter.vue';
 import { computed, ref } from 'vue';
+
 
 const expenses = ref([
     { id: 1, title: 'Cafe', value: 6, category: 'food' },
