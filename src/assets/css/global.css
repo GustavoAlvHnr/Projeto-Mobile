@@ -14,14 +14,21 @@ body {
   background: #f4f4f6;
   color: #111;
   -webkit-font-smoothing: antialiased;
+   background-color: rgb(255, 176, 218);
+
+}
+
+#app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 
 
-/* Espaçamento para conteúdo abaixo do header fixo */
 .page {
   padding: 72px 16px 16px;
   max-width: 600px;
   margin: 0 auto;
+  
 }
-
