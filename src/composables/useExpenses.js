@@ -3,7 +3,7 @@ import { ref,computed } from "vue";
 //Estado compartilhado
 const expenses = ref([]);
 
-const filter = ref('all');
+const filter = ref('Tudo');
 
 //Nome da chave para armazenamento local
 const STORAGE_KEY = 'expenses';
@@ -70,7 +70,7 @@ export function useExpenses(){
     }
 
     const filtered = computed(() => {
-        if(filter.value === 'all'){
+        if(filter.value === 'Tudo'){
             return expenses.value;
         }
         return expenses.value.filter((e) => e.category === filter.value);
@@ -85,7 +85,6 @@ export function useExpenses(){
         //computed
         totalExpenses,
         totalSpent,
-        filtered,
 
         //funções
         addExpense,

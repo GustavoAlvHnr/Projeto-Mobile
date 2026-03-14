@@ -9,5 +9,5 @@
 </template>
 
 <style scoped>
-
+@import '@/assets/css/global.css';
 </style>

@@ -28,8 +28,9 @@ defineProps({
     font-size: 16px;
     font-weight: 600;
     border: none;
-    border-radius: 8px;
+    border-radius: 28px;
     cursor: pointer;
+    margin-bottom: 8px;
     transition: 
     opacity 0.2s,
     transform 0.1s;
@@ -45,8 +46,8 @@ defineProps({
 }
 
 .variant-primary{
-    background-color: #ff91fa;
-    color: black;
+    background-color: #ffaffb;
+    color: white;
 }
 
 .variant-secondary{

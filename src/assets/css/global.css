@@ -11,11 +11,9 @@ body {
     'Segoe UI',
     Roboto,
     sans-serif;
-  background: #f4f4f6;
+  background: #fff;
   color: #111;
   -webkit-font-smoothing: antialiased;
-   background-color: rgb(255, 176, 218);
-
 }
 
 #app {

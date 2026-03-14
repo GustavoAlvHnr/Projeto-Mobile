@@ -11,45 +11,41 @@ defineEmits(['update-filter']);
 
 <template>
      <div class="app-footer" :style="{ top: props.topOffset }">
-                <button class="small-btn" :class="{ active: props.filtroAtual === 'all' }" @click="$emit('update-filter', 'all')">Tudo</button>
-                <button class="small-btn" :class="{ active: props.filtroAtual === 'food' }" @click="$emit('update-filter', 'food')">Comida</button>
-                <button class="small-btn" :class="{ active: props.filtroAtual === 'transport' }" @click="$emit('update-filter', 'transport')">Transporte</button>
-                <button class="small-btn" :class="{ active: props.filtroAtual === 'other' }" @click="$emit('update-filter', 'other')">Outros</button>
-            </div>
+                <button class="small-btn" :class="{ active: props.filtroAtual === 'Tudo' }" @click="$emit('update-filter', 'Tudo')">Tudo</button>
+                <button class="small-btn" :class="{ active: props.filtroAtual === 'Comida' }" @click="$emit('update-filter', 'Comida')">Comida</button>
+                <button class="small-btn" :class="{ active: props.filtroAtual === 'Transporte' }" @click="$emit('update-filter', 'Transporte')">Transporte</button>
+                <button class="small-btn" :class="{ active: props.filtroAtual === 'Outros' }" @click="$emit('update-filter', 'Outros')">Outros</button>
+    </div>
 </template>
 <style scoped>
-
-
 .app-footer {
-  background: #ff91fa;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffaffb;
   color: white;
   display: flex;
   flex-wrap: wrap; 
   align-items: center;
   justify-content: center;
-  padding: 8px 36px; 
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 28px;
-  margin-top: 12vh;
-  
+  padding: 8px 10px;
+  border-radius: 28px 28px 0 0;
 }
-
 .small-btn {
-    margin: 2px 5px;
-    padding: 13px 21px;
+    flex: 0 0 auto;
+    margin: 2px;
+    padding: 10px 16px;
     background: transparent;
     color: white;
     border: 1px solid white;
-    border-radius: 4px;
+    border-radius: 28px;
     cursor: pointer;
     white-space: nowrap;
 }
-
 .small-btn.active {
     background: white;
     color: #ff91fa;
 }
-
-
 </style>
 

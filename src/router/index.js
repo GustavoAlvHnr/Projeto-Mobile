@@ -11,8 +11,18 @@ const router = createRouter({
     {
       path: '/Despesa-View',
       name: 'expense',
-      component: () => import('../views/DespesaView.vue'),
-    }
+      component: () => import('../views/AddDespesaView.vue'),
+    },
+    {
+      path: '/Despesa-View/:id',
+      name: 'expense-detail',
+      component: () => import('../views/DespesaDetailView.vue'),
+    },
+    {
+      path: '/Despesa-View/:id/edit',
+      name: 'expense-edit',
+      component: () => import('../views/AddDespesaView.vue'),
+    },
   ],
 })
 
