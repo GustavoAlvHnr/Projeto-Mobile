@@ -41,7 +41,7 @@ import { RouterLink } from 'vue-router'
 
 const { expenses, filter, filtered, totalSpent, clearAll } = useExpenses()
 
-const total = totalSpent
+const total = computed(() => totalSpent.value)
 
 const vazio = computed(() => expenses.value.length === 0)
 </script>
